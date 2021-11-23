@@ -14,8 +14,8 @@ public class App
     public static void main( String[] args )
     {
         Company company = new Company("Telesignal S.A.");
-        Client client1 = new Client("Wilson","12345678",new Line("Local 555-0011"));
-        Client client2 = new Client("Sherlock","12346578", new Line("Local 555-0013"));
+        Client client1 = new Client("Wilson","12345678",new Line("Local 555-0011",250.50));
+        Client client2 = new Client("Sherlock","12346578", new Line("Local 555-0013",469.99));
 
         company.addClient(client1);
         company.addClient(client2);

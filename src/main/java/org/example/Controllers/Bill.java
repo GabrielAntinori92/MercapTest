@@ -52,18 +52,20 @@ public class Bill {
                 if(call instanceof LocalCall){
                     cost = calculateCost(call);
                     total += cost;
-                    System.out.println("Local " + "Duration: " + call.getDuration() + " Cost: $" + decimalFormat.format(cost));
+                    System.out.println("    Local " + "Duration: " + call.getDuration() + " Cost: $" + decimalFormat.format(cost));
                 }else if(call instanceof NationalCall){
                     cost = calculateCost(call);
                     total += cost;
-                    System.out.println("National " + "Duration: " + call.getDuration() + " Cost: $" + decimalFormat.format(cost));
+                    System.out.println("    National " + "Duration: " + call.getDuration() + " Cost: $" + decimalFormat.format(cost));
                 }else if(call instanceof InternationalCall){
                     cost = calculateCost(call);
                     total += cost;
-                    System.out.println("International " + "Duration: " + call.getDuration() + " Cost: $" + decimalFormat.format(cost));
+                    System.out.println("    International " + "Duration: " + call.getDuration() + " Cost: $" + decimalFormat.format(cost));
                 }
             }
-            System.out.println("Total: $" + decimalFormat.format(cost));
+            System.out.println("Monthly: $" + line.getMonthly());
+            total += line.getMonthly();
+            System.out.println("Total: $" + decimalFormat.format(total));
         }
     }
 

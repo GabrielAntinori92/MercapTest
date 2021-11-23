@@ -102,8 +102,7 @@ public class Bill {
                 cost = minutes * 0.1;
             }
         }else if(call instanceof NationalCall){
-            cost = minutes * 0.4;//improvement can be made, the "Line" should have been what dictates what
-                                //kind of call is being made
+            cost = minutes * 0.4;//improvement can be made
         }else if(call instanceof InternationalCall){
             cost = minutes * 0.8;// idem as above
         }
